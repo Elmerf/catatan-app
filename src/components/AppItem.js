@@ -3,7 +3,7 @@ import { showFormattedDate } from "../utils";
 
 function AppItem({ id, title, body, archived, createdAt, deleteCatatan, toggleArchive }) {
   return (
-    <div className="col-4 g-2">
+    <div className="col-6 col-lg-4 g-2">
       <div className="card shadow-sm h-100">
         <div className="card-header text-center">
           <p className="card-subtitle" style={{ fontSize: "0.85rem" }}>{ showFormattedDate(createdAt) }</p>

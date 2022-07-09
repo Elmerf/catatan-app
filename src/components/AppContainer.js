@@ -59,7 +59,7 @@ class AppContainer extends React.Component {
     this.setState((prevState) => {
       return {
         ...prevState,
-        searchString: event.target.value,
+        searchString: event.target.value.toLowerCase(),
       }
     })
   }
@@ -83,7 +83,7 @@ class AppContainer extends React.Component {
                 this.state.catatanItems
                   .filter((item) => 
                     item.archived === false && 
-                    item.title.includes(this.state.searchString))
+                    item.title.toLowerCase().includes(this.state.searchString))
               }
               deleteCatatan={this.onDeleteCatatanHandler}
               toggleArchive={this.onArchiveHandler} />
@@ -94,7 +94,7 @@ class AppContainer extends React.Component {
                 this.state.catatanItems
                   .filter((item) => 
                     item.archived === true && 
-                    item.title.includes(this.state.searchString))
+                    item.title.toLowerCase().includes(this.state.searchString))
               }
               deleteCatatan={this.onDeleteCatatanHandler} 
               toggleArchive={this.onArchiveHandler}  />
